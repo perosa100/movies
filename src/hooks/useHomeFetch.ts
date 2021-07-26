@@ -82,7 +82,6 @@ export const useHomeFetch = () => {
 
   useEffect(() => {
     if (!searchTerm) {
-      console.log(state, 'state')
       sessionStorage.setItem('homeState', JSON.stringify(state))
     }
   }, [searchTerm, state])
