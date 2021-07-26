@@ -4,6 +4,7 @@ export const calcTime = (time: number) => {
   const mins = time % 60
   return `${hours}h ${mins}m`
 }
+
 // Convert a number to money formatting
 export const convertMoney = (money: number) => {
   const formatter = new Intl.NumberFormat('en-US', {
@@ -12,4 +13,9 @@ export const convertMoney = (money: number) => {
     minimumFractionDigits: 0
   })
   return formatter.format(money)
+}
+
+export const isPersistedState = (stateName: string) => {
+  const sessionState = sessionStorage.getItem(stateName)
+  return sessionState && JSON.parse(sessionState)
 }

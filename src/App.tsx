@@ -1,14 +1,15 @@
 import GlobalStyles from 'styles/GlobalStyles'
 import Header from 'components/Header'
-import Home from 'pages/Home'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { RoutesApp } from 'routes'
 
-function App() {
+const App = () => {
   return (
-    <>
+    <Router>
       <Header />
-      <Home />
+      <RoutesApp />
       <GlobalStyles />
-    </>
+    </Router>
   )
 }
 
